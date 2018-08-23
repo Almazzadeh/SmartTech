@@ -403,11 +403,145 @@ header{
 
 // SECTION 4
 #sec4{
-    min-height: 300px;
-    border: 1px solid red;
-    background: #eee;
+    background: #f0f0f0;
+
+    h5.border-bottom{
+        border-color: #ccc !important;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 13%;
+            height: 1px;
+            background: $blue;
+            position: absolute;
+            bottom: -1px;
+        }
+    }
+
+    .topSelling{
+        padding: 0 5px;
+        margin-bottom: .7rem;
+
+        .bg{
+            background: url("../images/watch-bg.jpg");
+            background-size: cover;
+            background-position: center center;
+
+            .content{
+                width: 50%;
+                @extend %centerY;
+
+                .btn{
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    .w-lg-20{
+        min-height: 256px;
+    }
 }
 // SECTION 4 END
+
+// SECTION 5
+#sec5{
+    // HEADERS
+    .nav{
+        border: 1px solid lightgray;
+
+        .nav-link{
+            text-align: center;
+            padding: 13px 0;
+            background: white;
+            cursor: pointer;
+            border-radius: 0;
+            position: relative;
+
+            &:not(:last-child){
+                border-right: 1px solid lightgray;
+            }
+
+            .imgHolder{
+                width: 64px;
+                height: 64px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+
+                .imgUpDown{
+                    position: absolute;
+                    top: 0;
+                    bottom: auto;
+                }
+            }
+
+            h6{
+                color: black;
+                font-weight: bold;
+                margin: .3rem 0;
+                font-size: 1.1rem;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 15px solid $blue;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+
+            &.active{
+                background: $blue;
+                color: white;
+
+                .imgUpDown{
+                    top: auto;
+                    bottom: 0
+                }
+
+                h6{color: white;}
+            }
+
+            &:not(.active):hover h6{
+                color: $blue;
+            }
+        }
+    }
+
+    // OWL DOTS
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .owl-dot{
+            outline: none;
+        }
+
+        .owl-dot.active span{
+            border-color: $blue;
+            background: $blue;
+        }
+
+        span{
+            width: 15px;
+            height: 15px;
+            border: 1px solid lightgray;
+            background: white;
+            display: inline-block;
+            border-radius: 100%;
+            margin: 0 2px;
+        }
+    }
+}
+// SECTION 5 END
 
 
 // ******MEDIA QUERIES******
@@ -421,7 +555,8 @@ header{
     }
 
     #sec3 .owl-nav{
-        top: 100%;
+        top: auto;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -434,7 +569,6 @@ header{
         }
     }
 }
-
 
 // SMALL AND MEDIUM DEVICES
 @media screen and (max-width: 991px){
@@ -468,8 +602,9 @@ header{
         }
     }
 
-    // SECTION 2
-    #sec2 .mainRow > div:nth-child(-n + 2){
+    // BORDER BOTTOM ON MEDIUM DEVICES
+    #sec2 .mainRow > div:nth-child(-n + 2),
+    #sec5 .headers .col-6:nth-child(-n + 3){
         border-bottom: 1px solid lightgray;
     }
 
@@ -485,9 +620,24 @@ header{
         max-width: 20%;
     }
 
-    // SECTION 2
+    // SECTION 2 (4 DIVS)
     #sec2 .mainRow > div:not(:last-child){
         border-right: 1px solid lightgray;
+    }
+
+    // SECTION 4 (TOP SELLING OF THE WEEK)
+    #sec4{
+        .topSelling{
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+
+    // SECTION 5
+    #sec5{
+        .nav .nav-link.active::after{
+            opacity: 1;
+        }
     }
 }
 

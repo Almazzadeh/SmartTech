@@ -67,6 +67,7 @@ $(function () {
         }
 
         var productImageWidth = product.find("img").width();
+        // product.find("img").height(productImageWidth);
         console.log(productImageWidth);
         
     })
@@ -104,12 +105,44 @@ $(function () {
         })
     }
 
+    // OWL CAROUSEL ON SECTION 3
     $("#sec3 .owl-carousel").owlCarousel({
-        // items: 5,
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         nav: true,
         navText: ["<i class=\"fas fa-chevron-left\"></i>", "<i class=\"fas fa-chevron-right\"></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 5
+            }
+        }
+    });
+
+    // SECTION 4 CONTENT HEIGHT
+    $("#sec4 .bg").height($("#sec4 .product").outerHeight() - 2);
+
+    //SECTION 5 (PRODUCT CATEGORY TABS)
+    $("#sec5 .headers .col-6").on("click", function(){
+        $(this).parent().find(".active").removeClass("active");
+        $(this).addClass("active");
+
+        $("#sec5 .contents").find(".fade.show").removeClass("show")
+        var categoryName = $(this).find("h6").text();
+        var contentDiv = $("#sec5 .contents").find(`[data-category='${categoryName}']`).addClass("show");
+        console.log(contentDiv);
+        
+    })
+
+    $("#sec5 .owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        dots: true,
         responsive: {
             0: {
                 items: 1
