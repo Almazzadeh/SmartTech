@@ -69,7 +69,7 @@ $(function () {
         var productImageWidth = product.find("img").width();
         // product.find("img").height(productImageWidth);
         console.log(productImageWidth);
-        
+
     })
     //CREATE STAR RATING
     for (let index = 0; index < 5; index++) {
@@ -128,7 +128,7 @@ $(function () {
     $("#sec4 .bg").height($("#sec4 .product").outerHeight() - 2);
 
     //SECTION 5 (PRODUCT CATEGORY TABS)
-    $("#sec5 .headers .col-6").on("click", function(){
+    $("#sec5 .headers .col-6").on("click", function () {
         $(this).parent().find(".active").removeClass("active");
         $(this).addClass("active");
 
@@ -136,7 +136,7 @@ $(function () {
         var categoryName = $(this).find("h6").text();
         var contentDiv = $("#sec5 .contents").find(`[data-category='${categoryName}']`).addClass("show");
         console.log(contentDiv);
-        
+
     })
 
     $("#sec5 .owl-carousel").owlCarousel({
@@ -154,5 +154,40 @@ $(function () {
                 items: 5
             }
         }
+    });
+
+    $("#footer_sec1 .owl-carousel").owlCarousel({
+        loop: true,
+        responsive: {
+            0: {
+                items: 1,
+                autoplay: true,
+            },
+            768: {
+                items: 3,
+                autoplay: true,
+            },
+            992: {
+                items: 5
+            }
+        }
+    });
+
+    $("#footer_sec4 .year").html((new Date()).getFullYear())
+
+
+    // MOVE PAGE UP
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $('#gotop').css("opacity", "1")
+        } else {
+            $('#gotop').css("opacity", "0");
+        }
+    });
+
+    //Click event to scroll to top
+    $('#gotop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
     });
 })
