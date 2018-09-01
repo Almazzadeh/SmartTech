@@ -1,0 +1,92 @@
+// 1ST SECTION ON ABOUT
+#about_sec1{
+    .content{
+        @extend %centerY;
+        left: 20px;
+
+        a{
+            background: $blue;
+            color: white;
+            border-radius: 30px;
+            padding: 7px 15px;
+            margin-top: 1.5rem;
+        }
+    }
+}
+// 1ST SECTION ON ABOUT END
+
+// 3RD SECTION ON ABOUT
+#about_sec3{
+    .row{
+        align-items: center;
+
+        &:not(:last-child){
+            margin-bottom: 1.5rem;
+        }
+
+        p{
+            font-size: .9rem;
+            font-weight: bold;
+        }
+    }
+
+    .myprogress{
+        height: 16px;
+        background: #ccc;
+        border-radius: 20px;
+
+        .myprogress-bar{
+            width: 0;
+            height: 100%;
+            background: $blue;
+            border-radius: 20px;
+
+            span{
+                font-size: .7em;
+                
+                align-items: center;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+// 3RD SECTION ON ABOUT END
+
+// MEDIA QUERIES
+// ONLY SMALL DEVICES
+@media screen and (max-width: 767px){
+    // SECTION 1
+    #about_sec1{
+        .content *{
+            font-size: 100%;
+        }
+
+        a{
+            margin-top: .5rem !important;
+        }
+    }
+}
+
+// ********************************************
+
+// FOR PRODUCT 3 COLUMNS (PRODUCT 4 COLUMNS) PAGES
+#productUpperMenu{
+    color: $gray;
+    margin: 0 -10px 10px;
+    font-size: 14px;
+    line-height: 40px;
+
+    select{
+        color: $gray;
+        outline: none;
+    }
+
+    i:last-of-type{
+        margin-left: 1rem;
+        color: $blue;
+    }
+}

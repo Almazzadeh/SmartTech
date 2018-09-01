@@ -1,0 +1,151 @@
+#productSidebar{
+    font-size: 90%;
+    // position: static;
+    transition: .6s;
+
+    #closeSidebar{
+        width: 23px;
+        position: relative;
+        cursor: pointer;
+
+        span{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            &:first-child{
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:last-child{
+                transform: translate(-50%, -50%) rotate(135deg);
+            }
+        }
+    }
+
+    .form-check:not(:last-child){
+        margin-bottom: .2rem;
+    }
+
+    .irs-line, .irs-bar{
+        height: 5px;
+    }
+
+    .irs-slider{
+        top: 28px;
+        width: 15px;
+        height: 15px;
+    }
+
+    i{
+        color: #ccc;
+
+        &.gold{
+            color: gold;
+        }
+    }
+
+    .sizes a{
+        width: 37px;
+        height: 37px;
+        border: 1px solid lightgray;
+        margin-right: .8rem;
+        text-align: center;
+        line-height: 37px;
+        border-radius: 100%;
+        font-weight: bold;
+        color: black;
+        background: white;
+
+        &.active{
+            border-color: $blue;
+            background: $blue;
+            color: white;
+        }
+    }
+}
+
+#openSidebar{
+    margin: 0 -10px;
+    cursor: pointer;
+
+    span{
+        width: 45px;
+        height: 45px;
+        border: 1px solid $blue;
+        display: inline-block;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 45px;
+        color: $blue;
+        font-size: 1.3rem;
+        background: white;
+    }
+}
+
+.layout{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($color: black, $alpha: .7);
+    z-index: 99;
+    display: none;
+}
+
+// FOR SMALL AND MEDIUM DEVICES
+@media screen and (max-width: 991px){
+    #productSidebar{
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        background: darken($color: $blue, $amount: 16%);
+        transform: translateX(-100%);
+        color: white;
+
+        & > div{
+            overflow-y: scroll;
+            max-height: 100vh;
+            padding: 15px 0;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar-track
+            {
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar
+            {
+                width: 4px;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: $gray;
+            }
+        }
+
+        input[type="checkbox"]:checked + label::before{
+            color: white;
+        }
+
+        .irs-min, .irs-max{
+            color: white;
+        }
+
+        .checkboxWrapper small{
+            color: lightgray !important;
+        }
+
+        i{
+            color: lightgray
+        }
+    }
+}

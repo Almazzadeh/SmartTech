@@ -1,6 +1,11 @@
-// DEFAULTS
+// IMPORT DEFAULTS
 @import "default";
 @import "product";
+
+// IMPORT PAGES
+@import "aboutpage";
+@import "productSidebar";
+
 
 // HEADER
 header{
@@ -396,49 +401,12 @@ header{
     .nav-pills .nav-link.active{
         background-color: $blue;
     }
-
-    .owl-nav{
-        position: absolute;
-        top: -57px;
-        right: 0;
-        display: flex;
-        justify-content: center;
-
-        button{
-            background: white;
-            border: 1px solid $gray;
-            width: 25px;
-            height: 25px;
-            position: relative;
-            margin-left: 10px;
-
-            i{
-                @extend %center;
-                color: $gray;
-            }
-        }
-    }
 }
 // SECTION 3 END
 
 // SECTION 4
 #sec4{
     background: #f0f0f0;
-
-    h5.border-bottom{
-        border-color: #ccc !important;
-        position: relative;
-
-        &::after{
-            content: "";
-            display: block;
-            width: 13%;
-            height: 1px;
-            background: $blue;
-            position: absolute;
-            bottom: -1px;
-        }
-    }
 
     .topSelling{
         padding: 0 5px;
@@ -565,20 +533,6 @@ header{
 
 // SECTION 6
 #sec6{
-    h5.border-bottom{
-        border-color: #ccc !important;
-        position: relative;
-
-        &::after{
-            content: "";
-            display: block;
-            width: 13%;
-            height: 1px;
-            background: $blue;
-            position: absolute;
-            bottom: -1px;
-        }
-    }
 
     .mainRow{
         > div{
@@ -671,6 +625,7 @@ footer{
         img{
             opacity: .8;
             transition: .5s;
+            object-fit: scale-down;
             cursor: pointer;
 
             &:hover{
@@ -775,7 +730,6 @@ footer{
 
 }
 // ------- FOOTER END -------
-
 
 
 // ******MEDIA QUERIES******

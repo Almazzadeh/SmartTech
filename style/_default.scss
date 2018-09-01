@@ -1,7 +1,6 @@
 $gray: #686868;
 $blue: #0088cc;
 
-
 *{
     margin: 0;
     padding: 0;
@@ -106,5 +105,90 @@ ul{
         background: $gray;
         color: white;
     }
-    
+}
+
+// BREADCRUMB DEFAULTS
+.breadcrumb{
+    background-color: transparent;
+    border-bottom: 1px solid lightgrey;
+    font-size: .9rem;
+    padding: .5rem;
+
+    .breadcrumb-item + .breadcrumb-item::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: "\f105";
+    }
+
+    .breadcrumb-item.active{
+        color: black;
+    }
+}
+
+// UNDERLINE WITH BASIC COLOR PART
+.underline{
+    border-bottom: 1px solid #ccc;;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 13%;
+        height: 1px;
+        background: $blue;
+        position: absolute;
+        bottom: -1px;
+    }
+}
+
+// SIDEBAR CHECKBOX
+.form-check{
+    padding: 0;
+
+    label{
+        user-select: none;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]{
+        display: none;
+
+        & + label::before{
+            content: "\f0c8";
+            color: lighten($color: $gray, $amount: 15%);
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            margin-right: .5rem;
+        }
+
+        &:checked + label::before{
+            content: "\f14a";
+            font-weight: 900;
+            color: $blue;
+        }
+    }
+}
+
+// OWL CAROUSEL NAVIGATION
+.owl-nav{
+    position: absolute;
+    top: -57px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+
+    button{
+        background: white !important;
+        border: 1px solid $gray !important;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        margin-left: 10px;
+
+        i{
+            @extend %center;
+            color: $gray;
+        }
+    }
 }

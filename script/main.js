@@ -35,7 +35,7 @@ $(function () {
         $(this).find(".dropdown-menu").slideUp();
     })
 
-    // CAROUSEL
+    // INDEX PAGE SECTION 1 CAROUSEL
     $("#sec1 .owl-carousel").owlCarousel({
         items: 1,
         loop: true,
@@ -86,7 +86,7 @@ $(function () {
         },
 
         mouseover: function () {
-            $(this).css("color", "orange").prevAll().css("color", "orange");
+            $(this).css("color", "gold").prevAll().css("color", "gold");
             $(this).nextAll().css("color", "")
         },
 
@@ -100,13 +100,13 @@ $(function () {
         $(".starRating").each(function () {
             var currentPoint = Math.min(5, $(this).data("current"))
             var currentChild = $(this).children().eq(currentPoint - 1);
-            currentChild.css("color", "orange").prevAll().css("color", "orange");
+            currentChild.css("color", "gold").prevAll().css("color", "gold");
             currentChild.nextAll().css("color", "")
         })
     }
 
     // OWL CAROUSEL ON SECTION 3
-    $("#sec3 .owl-carousel").owlCarousel({
+    $("#sec3 .owl-carousel, #product3_sec2 .owl-carousel").owlCarousel({
         loop: true,
         autoplay: true,
         nav: true,
@@ -158,6 +158,7 @@ $(function () {
 
     $("#footer_sec1 .owl-carousel").owlCarousel({
         loop: true,
+        dots: false,
         responsive: {
             0: {
                 items: 1,
@@ -190,4 +191,49 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
     });
+
+
+
+    // ABOUT PAGE PROGRESS BARS
+    $('.myprogress-bar .title').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+                duration: 2500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now) + "%");
+                }
+            });
+    });
+
+    $(".myprogress-bar").each(function () {
+        var maxWidth = $(this).data("width");
+
+        $(this).animate({
+            width: maxWidth + "%"
+        }, 2500)
+    })
+
+    // RANGE INPUT
+    $("#range").ionRangeSlider({
+        type: "double",
+        grid: true,
+        min: 0,
+        max: 1000,
+        from: 200,
+        to: 700,
+        prefix: "$"
+    });
+
+    //SHOW-HIDE PRODUCT SIDEBAR
+    $("#openSidebar").on("click", function(){
+        $("#productSidebar").css("transform", "translateX(0)");
+        $(".layout").fadeIn();
+    })
+
+    $("#closeSidebar, .layout").on("click", function(){
+        $("#productSidebar").css("transform", "");
+        $(".layout").fadeOut();
+    })
 })
