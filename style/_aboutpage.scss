@@ -73,7 +73,7 @@
 
 // ********************************************
 
-// FOR PRODUCT 3 COLUMNS (PRODUCT 4 COLUMNS) PAGES
+// FOR PRODUCT 3 COLUMNS (PRODUCT 4 COLUMNS, LIST PRODUCTS) PAGES
 #productUpperMenu{
     color: $gray;
     margin: 0 -10px 10px;
@@ -85,8 +85,13 @@
         outline: none;
     }
 
-    i:last-of-type{
-        margin-left: 1rem;
-        color: $blue;
+    i{
+        &:last-of-type{
+            margin-left: 1rem;
+        }
+
+        &.activeicon{
+            color: $blue;
+        }
     }
 }

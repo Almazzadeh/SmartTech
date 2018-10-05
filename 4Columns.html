@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="navbar/navbar.css">
     <link rel="stylesheet" href="owl/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="range/normalize.css">
     <link rel="stylesheet" href="range/ion.rangeSlider.css">
     <link rel="stylesheet" href="range/ion.rangeSlider.skinHTML5.css">
@@ -21,6 +22,15 @@
 </head>
 
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+    <!-- /PRELOADER -->
     <!-- HEADER -->
     <header>
         <!-- TOP SECTION OF HEADER -->
@@ -279,7 +289,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto mainNavbar">
                             <!-- HOME -->
-                            <li class="nav-item dropdown active">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
                                     Home
@@ -364,7 +374,7 @@
                             <!-- /HOME -->
 
                             <!-- PAGES -->
-                            <li class="nav-item dropdown position-relative">
+                            <li class="nav-item dropdown position-relative active">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
                                     Pages
@@ -931,17 +941,17 @@
                         </select>
                         <span class="mx-2">|</span>
                         <i class="fas fa-list"></i>
-                        <i class="fas fa-th"></i>
+                        <i class="fas fa-th activeicon"></i>
                         <span class="mx-2">|</span>
                         <select class="border-0">
-                            <option>3 Columns</option>
-                            <option selected>4 Columns</option>
+                            <option value="3Columns.html">3 Columns</option>
+                            <option value="4Columns.html" selected>4 Columns</option>
                             <option>5 Columns</option>
                         </select>
                     </div>
                     <div class="row">
                         <!-- MACBOOK -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-1.jpg" alt="Photo not found" class="img-fluid">
@@ -970,7 +980,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -1001,7 +1011,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1031,7 +1041,7 @@
                         </div>
 
                         <!-- SAMSUNG HEADPHONE -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1061,7 +1071,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-5.jpg" alt="Photo not found" class="img-fluid">
@@ -1089,7 +1099,7 @@
                             </div>
                         </div>
 
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-6.jpg" alt="Photo not found" class="img-fluid">
@@ -1118,7 +1128,7 @@
                         </div>
 
                         <!-- BEATS SOLO2 -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <div class="discount">-13%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1148,7 +1158,7 @@
                         </div>
 
                         <!-- APPLE MACBOOK AIR -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-8.jpg" alt="Photo not found" class="img-fluid">
@@ -1177,7 +1187,7 @@
                         </div>
 
                         <!-- APPLE WATCH -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-9.jpg" alt="Photo not found" class="img-fluid">
@@ -1206,7 +1216,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1236,7 +1246,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1265,7 +1275,7 @@
                         </div>
 
                         <!-- SEGWAY -->
-                        <div class="productHolder col-lg-3 col-md-4">
+                        <div class="productHolder col-lg-3 col-md-4 wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-16.jpg" alt="Photo not found" class="img-fluid">
@@ -1306,7 +1316,7 @@
 
             <div class="owl-carousel">
                 <!-- IPAD -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <div class="discount">-25%</div>
                         <!-- PRODUCT IMAGE -->
@@ -1336,7 +1346,7 @@
                 </div>
 
                 <!-- CAMERA -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -1366,7 +1376,7 @@
                 </div>
 
                 <!-- IPHONE -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <div class="discount">-30%</div>
                         <!-- PRODUCT IMAGE -->
@@ -1396,7 +1406,7 @@
                 </div>
 
                 <!-- APPLE IMAC -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <div class="new">NEW</div>
                         <!-- PRODUCT IMAGE -->
@@ -1426,7 +1436,7 @@
                 </div>
 
                 <!-- BANG & OLUFSEN -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1455,7 +1465,7 @@
                 </div>
 
                 <!-- SEGWAY -->
-                <div class="productHolder">
+                <div class="productHolder wow flipInY">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-16.jpg" alt="Photo not found" class="img-fluid">
@@ -1648,6 +1658,7 @@
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="owl/owl.carousel.min.js"></script>
     <script src="range/ion.rangeSlider.js"></script>
+    <script src="script/wow.min.js"></script>
     <script src="script/main.js"></script>
 </body>
 

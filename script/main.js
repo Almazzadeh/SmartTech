@@ -1,4 +1,5 @@
 $(function () {
+    new WOW().init();
 
     // THE FADE EFFECT OF BASKET ON HEADER
     $("header .basket").on("mouseover", function () {
@@ -35,26 +36,10 @@ $(function () {
         $(this).find(".dropdown-menu").slideUp();
     })
 
-    // INDEX PAGE SECTION 1 CAROUSEL
-    $("#sec1 .owl-carousel").owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoplaySpeed: 1000
-    });
-
-    // HEIGHT OF CAROUSEL SIDE DIVS
-    if ($(window).width() >= 992) {
-        var carouselHeight = $("#sec1 .owl-carousel").height();
-
-        $("#sec1 .carouselSide .col-lg-12").height((carouselHeight / 2));
-    }
-
     // ****PRODUCT****
-
     $(".product").each(function () {
         var product = $(this);
+        var productImg = product.find("img")
         // NEW PRICE BY DISCOUNT
         if (product.find(".discount").length !== 0) {
             var discount = product.find(".discount").text().substring(1, 3);
@@ -66,11 +51,12 @@ $(function () {
             product.find(".productPrice").html("$" + newprice);
         }
 
-        var productImageWidth = product.find("img").width();
+        // var productImageWidth = productImg.width();
         // product.find("img").height(productImageWidth);
-        console.log(productImageWidth);
-
     })
+
+    // ==================================
+
     //CREATE STAR RATING
     for (let index = 0; index < 5; index++) {
         $(".starRating").append("<i class=\"fas fa-star\"></i>")
@@ -105,25 +91,6 @@ $(function () {
         })
     }
 
-    // OWL CAROUSEL ON SECTION 3
-    $("#sec3 .owl-carousel, #product3_sec2 .owl-carousel").owlCarousel({
-        loop: true,
-        autoplay: true,
-        nav: true,
-        navText: ["<i class=\"fas fa-chevron-left\"></i>", "<i class=\"fas fa-chevron-right\"></i>"],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 3
-            },
-            992: {
-                items: 5
-            }
-        }
-    });
-
     // SECTION 4 CONTENT HEIGHT
     $("#sec4 .bg").height($("#sec4 .product").outerHeight() - 2);
 
@@ -137,7 +104,101 @@ $(function () {
         var contentDiv = $("#sec5 .contents").find(`[data-category='${categoryName}']`).addClass("show");
         console.log(contentDiv);
 
+    });
+
+    // ==================================
+
+    $("#footer_sec4 .year").html((new Date()).getFullYear())
+
+    // ==================================
+
+    // MOVE PAGE UP
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $('#gotop').css("opacity", "1")
+        } else {
+            $('#gotop').css("opacity", "0");
+        }
+    });
+
+    // ==================================
+
+    //Click event to scroll to top
+    $('#gotop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+
+    // ==================================
+
+    // ABOUT PAGE PROGRESS BARS
+    $('.myprogress-bar .title').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+                duration: 2500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now) + "%");
+                }
+            });
+    });
+
+    $(".myprogress-bar").each(function () {
+        var maxWidth = $(this).data("width");
+
+        $(this).animate({
+            width: maxWidth + "%"
+        }, 2500)
     })
+
+    // ==================================
+
+    // RANGE SLIDER
+    if ($(document).find("#range").length !== 0) {
+        $("#range").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 1000,
+            from: 200,
+            to: 700,
+            prefix: "$"
+        });
+    }
+
+    // ==================================
+
+    //SHOW-HIDE PRODUCT SIDEBAR
+    $("#openSidebar").on("click", function () {
+        $("#productSidebar").css("transform", "translateX(0)");
+        $(".layout").fadeIn();
+    })
+
+    $("#closeSidebar, .layout").on("click", function () {
+        $("#productSidebar").css("transform", "");
+        $(".layout").fadeOut();
+    })
+
+    // ==================================
+
+    // LIST PRODUCT PAGE
+    $("#listProduct .product > div").each(function () {
+        var productImageHeight = $("#listProduct img").height()
+        $(this).css("height", productImageHeight + "px");
+    })
+
+    // ==================================
+
+    // ******ALL OWL CAROUSEL SCRIPTS******
+    // INDEX PAGE SECTION 1 CAROUSEL
+    $("#sec1 .owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        // autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2000
+    });
 
     $("#sec5 .owl-carousel").owlCarousel({
         loop: true,
@@ -174,66 +235,73 @@ $(function () {
         }
     });
 
-    $("#footer_sec4 .year").html((new Date()).getFullYear())
-
-
-    // MOVE PAGE UP
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 400) {
-            $('#gotop').css("opacity", "1")
-        } else {
-            $('#gotop').css("opacity", "0");
+    // OWL CAROUSEL ON SECTION 3
+    $("#sec3 .owl-carousel, #product3_sec2 .owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        nav: true,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>", "<i class=\"fas fa-chevron-right\"></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 5
+            }
         }
     });
 
-    //Click event to scroll to top
-    $('#gotop').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        return false;
+    // RELATED PRODUCT CAROUSEL
+    $("#related_products .owl-carousel").owlCarousel({
+        loop: true,
+        // autoplay: true,
+        nav: true,
+        navText: ["<i class=\"fas fa-chevron-left\"></i>", "<i class=\"fas fa-chevron-right\"></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
     });
 
+    // ==================================
 
+    // ****PRODUCT DETAILS****
+    function changeProduct(mainID, productName, productPrice, imgSource) {
+        $("#product-Details " + mainID).on("click", function (e) {
+            e.preventDefault();
+            $("#product-Details .productName").html(productName);
+            $("#product-Details .price").html(productPrice);
 
-    // ABOUT PAGE PROGRESS BARS
-    $('.myprogress-bar .title').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-                duration: 2500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now) + "%");
-                }
-            });
-    });
+            $("#product-Details img").fadeOut(200, function () {
+                    $("#product-Details img").attr('src', "images/products/" + imgSource);
+            }).fadeIn(200);
+                
+            $("#product-Details .color").find(".active").removeClass("active");
+            $(this).addClass("active");
+        })
+    }
 
-    $(".myprogress-bar").each(function () {
-        var maxWidth = $(this).data("width");
+    changeProduct("#black", "Ninebot mini pro (black)", "$3699.90", "item-img-1-16-black.jpg");
 
-        $(this).animate({
-            width: maxWidth + "%"
-        }, 2500)
+    changeProduct("#white", "Ninebot mini pro (white)", "$3499.90", "item-img-1-16.jpg");
+
+    $("#product-Details .size a").on("click", function (e) {
+        e.preventDefault();
+        $(this).parent().find(".active").removeClass("active");
+        $(this).addClass("active");
     })
+})
 
-    // RANGE INPUT
-    $("#range").ionRangeSlider({
-        type: "double",
-        grid: true,
-        min: 0,
-        max: 1000,
-        from: 200,
-        to: 700,
-        prefix: "$"
-    });
-
-    //SHOW-HIDE PRODUCT SIDEBAR
-    $("#openSidebar").on("click", function(){
-        $("#productSidebar").css("transform", "translateX(0)");
-        $(".layout").fadeIn();
-    })
-
-    $("#closeSidebar, .layout").on("click", function(){
-        $("#productSidebar").css("transform", "");
-        $(".layout").fadeOut();
-    })
+window.addEventListener("load", function () {
+    $("#preloader").fadeOut();
 })

@@ -105,7 +105,7 @@
         z-index: 1000;
         left: 0;
         top: 0;
-        background: darken($color: $blue, $amount: 16%);
+        background: linear-gradient(to right, $blue, darken($color: $blue, $amount: 16%));
         transform: translateX(-100%);
         color: white;
 

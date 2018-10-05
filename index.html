@@ -12,12 +12,22 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="navbar/navbar.css">
+    <link rel="stylesheet" href="style/animate.css">
     <link rel="stylesheet" href="owl/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/owl.theme.default.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+    <!-- /PRELOADER -->
     <!-- HEADER -->
     <header>
         <!-- TOP SECTION OF HEADER -->
@@ -596,7 +606,7 @@
         <div class="container">
             <div class="row mainRow">
                 <!-- CAROUSEL -->
-                <div class="col-lg-8 p-0">
+                <div class="col-lg-8 p-0 animated fadeInLeft">
                     <div class="owl-carousel">
                         <!-- CAROUSEL 1ST ELEMENT -->
                         <div>
@@ -641,7 +651,7 @@
                 <!-- RIGHT SIDE CAROUSEL -->
                 <div class="col-lg-4">
                     <div class="row carouselSide">
-                        <div class="col-lg-12 col-md-6 p-0">
+                        <div class="col-lg-12 col-md-6 p-0 animated fadeInRight">
                             <img src="images/slider-bnr.jpg" alt="Photo not found." class="w-100">
 
                             <div class="caption">
@@ -650,7 +660,7 @@
                                 <h3 class="font-weight-bold">$365.90</h3>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-6 p-0">
+                        <div class="col-lg-12 col-md-6 p-0 animated fadeInRight delay-200">
                             <img src="images/week-sale-bg.jpg" alt="Photo not found" class="w-100">
 
                             <div class="caption text-center">
@@ -673,7 +683,7 @@
         <div class="container">
             <div class="row mainRow">
                 <!-- 1ST ELEMENT -->
-                <div class="col-lg-3 col-md-6 p-3">
+                <div class="col-lg-3 col-md-6 p-3 wow zoomIn">
                     <div class="row">
                         <div class="col-3">
                             <img src="images/icon/shipped.png" alt="Icon not found" class="img-fluid">
@@ -688,7 +698,7 @@
                     </div>
                 </div>
                 <!-- 2ND ELEMENT -->
-                <div class="col-lg-3 col-md-6 p-3">
+                <div class="col-lg-3 col-md-6 p-3 wow zoomIn" data-wow-delay=".2s">
                     <div class="row">
                         <div class="col-3">
                             <img src="images/icon/transfer.png" alt="Icon not found" class="img-fluid">
@@ -703,7 +713,7 @@
                     </div>
                 </div>
                 <!-- 3RD ELEMENT -->
-                <div class="col-lg-3 col-md-6 p-3">
+                <div class="col-lg-3 col-md-6 p-3 wow zoomIn" data-wow-delay=".4s">
                     <div class="row">
                         <div class="col-3">
                             <img src="images/icon/operator.png" alt="Icon not found" class="img-fluid">
@@ -718,7 +728,7 @@
                     </div>
                 </div>
                 <!-- 4TH ELEMENT -->
-                <div class="col-lg-3 col-md-6 p-3">
+                <div class="col-lg-3 col-md-6 p-3 wow zoomIn" data-wow-delay=".6s">
                     <div class="row">
                         <div class="col-3">
                             <img src="images/icon/package.png" alt="Icon not found" class="img-fluid">
@@ -766,7 +776,7 @@
                 <div class="pt-3 tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="owl-carousel">
                         <!-- MACBOOK -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-1.jpg" alt="Photo not found" class="img-fluid">
@@ -795,7 +805,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -826,7 +836,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -856,7 +866,7 @@
                         </div>
 
                         <!-- SAMSUNG HEADPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -886,7 +896,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-5.jpg" alt="Photo not found" class="img-fluid">
@@ -914,7 +924,7 @@
                             </div>
                         </div>
 
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-6.jpg" alt="Photo not found" class="img-fluid">
@@ -948,7 +958,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="owl-carousel">
                         <!-- BEATS SOLO2 -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-13%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -978,7 +988,7 @@
                         </div>
 
                         <!-- APPLE MACBOOK AIR -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-8.jpg" alt="Photo not found" class="img-fluid">
@@ -1007,7 +1017,7 @@
                         </div>
 
                         <!-- APPLE WATCH -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-9.jpg" alt="Photo not found" class="img-fluid">
@@ -1036,7 +1046,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1066,7 +1076,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1100,7 +1110,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <div class="owl-carousel">
                         <!-- IPAD -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-25%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1130,7 +1140,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -1161,7 +1171,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1191,7 +1201,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1221,7 +1231,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1250,7 +1260,7 @@
                         </div>
 
                         <!-- SEGWAY -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-16.jpg" alt="Photo not found" class="img-fluid">
@@ -1289,7 +1299,7 @@
         <div class="container">
             <h5 class="pb-2 underline font-weight-bold">Top Selling of the Week</h5>
             <div class="row mt-3">
-                <div class="col-md-4 topSelling">
+                <div class="col-md-4 topSelling wow fadeInLeft">
                     <div class="bg">
                         <div class="content ml-3">
                             <h5 class="font-weight-bold">Smart Watch 2.0</h5>
@@ -1299,7 +1309,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-1.jpg" alt="Photo not found" class="img-fluid">
@@ -1326,7 +1337,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <div class="discount">-13%</div>
                         <!-- PRODUCT IMAGE -->
@@ -1354,7 +1365,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-9.jpg" alt="Photo not found" class="img-fluid">
@@ -1381,7 +1392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <div class="new">NEW</div>
                         <!-- PRODUCT IMAGE -->
@@ -1409,7 +1420,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <div class="discount">-25%</div>
                         <!-- PRODUCT IMAGE -->
@@ -1437,7 +1448,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -1465,7 +1476,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <div class="discount">-30%</div>
                         <!-- PRODUCT IMAGE -->
@@ -1493,7 +1504,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-lg-20 col-md-4 productHolder">
+                <div class="w-lg-20 col-md-4 productHolder wow flipInY" data-wow-delay=".5s">
                     <div class="product">
                         <!-- PRODUCT IMAGE -->
                         <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1530,7 +1541,7 @@
         <div class="container">
             <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
                 <!-- TV & AUDIO HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn">
                     <a class="nav-link active" id="pills-tv-tab" data-toggle="pill" href="#pills-tv" role="tab" aria-controls="pills-tv" aria-selected="true">
                         <div class="imgHolder">
                             <div class="imgUpDown">
@@ -1545,7 +1556,7 @@
                 </li>
 
                 <!-- SMARTPHONES HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn" data-wow-delay=".2s">
                     <a class="nav-link" id="pills-smartphones-tab" data-toggle="pill" href="#pills-smartphones" role="tab" aria-controls="pills-smartphones"
                         aria-selected="false">
                         <div class="imgHolder">
@@ -1561,7 +1572,7 @@
                 </li>
 
                 <!-- LAPTOP HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn" data-wow-delay=".4s">
                     <a class="nav-link" id="pills-laptop-tab" data-toggle="pill" href="#pills-laptop" role="tab" aria-controls="pills-laptop"
                         aria-selected="false">
                         <div class="imgHolder">
@@ -1577,7 +1588,7 @@
                 </li>
 
                 <!-- GAMING HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn" data-wow-delay=".6s">
                     <a class="nav-link" id="pills-gaming-tab" data-toggle="pill" href="#pills-gaming" role="tab" aria-controls="pills-gaming"
                         aria-selected="false">
                         <div class="imgHolder">
@@ -1593,7 +1604,7 @@
                 </li>
 
                 <!-- WATCH HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn" data-wow-delay=".8s">
                     <a class="nav-link" id="pills-watch-tab" data-toggle="pill" href="#pills-watch" role="tab" aria-controls="pills-watch" aria-selected="false">
                         <div class="imgHolder">
                             <div class="imgUpDown">
@@ -1608,7 +1619,7 @@
                 </li>
 
                 <!-- ACCESSORIES HEADER -->
-                <li class="nav-item">
+                <li class="nav-item wow fadeIn" data-wow-delay="1s">
                     <a class="nav-link" id="pills-accessories-tab" data-toggle="pill" href="#pills-accessories" role="tab" aria-controls="pills-accessories"
                         aria-selected="false">
                         <div class="imgHolder">
@@ -1629,7 +1640,7 @@
                 <div class="pt-3 tab-pane fade show active" id="pills-tv" role="tabpanel" aria-labelledby="pills-tv-tab">
                     <div class="owl-carousel">
                         <!-- MACBOOK -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-1.jpg" alt="Photo not found" class="img-fluid">
@@ -1658,7 +1669,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -1689,7 +1700,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1719,7 +1730,7 @@
                         </div>
 
                         <!-- SAMSUNG HEADPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1749,7 +1760,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-5.jpg" alt="Photo not found" class="img-fluid">
@@ -1777,7 +1788,7 @@
                             </div>
                         </div>
 
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY" data-wow-delay=".5s">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-6.jpg" alt="Photo not found" class="img-fluid">
@@ -1811,7 +1822,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-smartphones" role="tabpanel" aria-labelledby="pills-smartphones-tab">
                     <div class="owl-carousel">
                         <!-- BEATS SOLO2 -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-13%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1841,7 +1852,7 @@
                         </div>
 
                         <!-- APPLE MACBOOK AIR -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-8.jpg" alt="Photo not found" class="img-fluid">
@@ -1870,7 +1881,7 @@
                         </div>
 
                         <!-- APPLE WATCH -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-9.jpg" alt="Photo not found" class="img-fluid">
@@ -1899,7 +1910,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1929,7 +1940,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -1963,7 +1974,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-laptop" role="tabpanel" aria-labelledby="pills-laptop-tab">
                     <div class="owl-carousel">
                         <!-- IPAD -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-25%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -1993,7 +2004,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -2024,7 +2035,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2054,7 +2065,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2084,7 +2095,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -2118,7 +2129,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-gaming" role="tabpanel" aria-labelledby="pills-gaming-tab">
                     <div class="owl-carousel">
                         <!-- MACBOOK -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-1.jpg" alt="Photo not found" class="img-fluid">
@@ -2147,7 +2158,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -2178,7 +2189,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2208,7 +2219,7 @@
                         </div>
 
                         <!-- SAMSUNG HEADPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2238,7 +2249,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-5.jpg" alt="Photo not found" class="img-fluid">
@@ -2266,7 +2277,7 @@
                             </div>
                         </div>
 
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-6.jpg" alt="Photo not found" class="img-fluid">
@@ -2300,7 +2311,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-watch" role="tabpanel" aria-labelledby="pills-watch-tab">
                     <div class="owl-carousel">
                         <!-- BEATS SOLO2 -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-13%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2330,7 +2341,7 @@
                         </div>
 
                         <!-- APPLE MACBOOK AIR -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-8.jpg" alt="Photo not found" class="img-fluid">
@@ -2359,7 +2370,7 @@
                         </div>
 
                         <!-- APPLE WATCH -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-9.jpg" alt="Photo not found" class="img-fluid">
@@ -2388,7 +2399,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2418,7 +2429,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -2452,7 +2463,7 @@
                 <div class="pt-3 tab-pane fade" id="pills-accessories" role="tabpanel" aria-labelledby="pills-accessories-tab">
                     <div class="owl-carousel">
                         <!-- IPAD -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-25%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2482,7 +2493,7 @@
                         </div>
 
                         <!-- CAMERA -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-2.jpg" alt="Photo not found" class="img-fluid">
@@ -2513,7 +2524,7 @@
                         </div>
 
                         <!-- IPHONE -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="discount">-30%</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2543,7 +2554,7 @@
                         </div>
 
                         <!-- APPLE IMAC -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <div class="new">NEW</div>
                                 <!-- PRODUCT IMAGE -->
@@ -2573,7 +2584,7 @@
                         </div>
 
                         <!-- BANG & OLUFSEN -->
-                        <div class="productHolder">
+                        <div class="productHolder wow flipInY">
                             <div class="product">
                                 <!-- PRODUCT IMAGE -->
                                 <img src="images/products/item-img-1-11.jpg" alt="Photo not found" class="img-fluid">
@@ -2613,7 +2624,7 @@
             <h5 class="pb-2 underline font-weight-bold">From Our Blog</h5>
             <div class="row mainRow mt-3">
                 <!-- 1ST BLOG -->
-                <div class="col-lg-3 col-md-6" style="background-image: url(images/blog/blog-img-1.jpg);">
+                <div class="col-lg-3 col-md-6 wow zoomIn" style="background-image: url(images/blog/blog-img-1.jpg);">
                     <div class="datetime text-center">
                         <h3>02</h3>
                         <p>JAN</p>
@@ -2630,7 +2641,7 @@
                 </div>
 
                 <!-- 2ND BLOG -->
-                <div class="col-lg-3 col-md-6" style="background-image: url(images/blog/blog-img-2.jpg);">
+                <div class="col-lg-3 col-md-6 wow zoomIn" style="background-image: url(images/blog/blog-img-2.jpg);">
                     <div class="datetime text-center">
                         <h3>13</h3>
                         <p>MAR</p>
@@ -2647,7 +2658,7 @@
                 </div>
 
                 <!-- 3RD BLOG -->
-                <div class="col-lg-3 col-md-6" style="background-image: url(images/blog/blog-img-3.jpg);">
+                <div class="col-lg-3 col-md-6 wow zoomIn" style="background-image: url(images/blog/blog-img-3.jpg);">
                     <div class="datetime text-center">
                         <h3>16</h3>
                         <p>MAR</p>
@@ -2664,7 +2675,7 @@
                 </div>
 
                 <!-- 4TH BLOG -->
-                <div class="col-lg-3 col-md-6" style="background-image: url(images/blog/blog-img-4.jpg);">
+                <div class="col-lg-3 col-md-6 wow zoomIn" style="background-image: url(images/blog/blog-img-4.jpg);">
                     <div class="datetime text-center">
                         <h3>29</h3>
                         <p>JUL</p>
@@ -2843,6 +2854,7 @@
     <script src="script/jquery.min.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="owl/owl.carousel.min.js"></script>
+    <script src="script/wow.min.js"></script>
     <script src="script/main.js"></script>
 </body>
 

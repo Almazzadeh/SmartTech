@@ -1,6 +1,7 @@
 // IMPORT DEFAULTS
 @import "default";
 @import "product";
+@import "preloader";
 
 // IMPORT PAGES
 @import "aboutpage";
@@ -270,6 +271,9 @@ header{
 // SECTION 1
 #sec1{
     // OWL CAROUSEL
+    .owl-carousel, .owl-stage-outer, .owl-stage, .owl-item, .owl-item > div, .owl-item img{
+        height: 100%;
+    }
     .owl-carousel{
         &:hover .owl-dots{
             opacity: 1;
